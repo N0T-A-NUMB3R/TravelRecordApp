@@ -13,5 +13,21 @@ namespace TravelRecordApp
         {
             InitializeComponent();
         }
+
+
+        private void LoginButton_OnClicked(object sender, EventArgs e)
+        {
+            var isEmptyEmail = string.IsNullOrEmpty(emailEntry.Text);
+            var isPasswordEmpty = string.IsNullOrEmpty(passwordEntry.Text);
+            if (isEmptyEmail || isPasswordEmpty)
+            {
+
+            }
+            else
+            {
+                Navigation.PushAsync(new HomePage()); // manda una nuova pagina sullo schermo
+            }
+
+        }
     }
 }
