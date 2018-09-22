@@ -9,6 +9,8 @@
         <!-- Place new controls here -->
         <Entry x:Name="emailEntry"
                Placeholder="Email Address"
+               TextColor="{StaticResource blueColor}"
+               Text="Test"
                Keyboard="Email"/>
         <Entry x:Name="passwordEntry"
                Placeholder="Password"
@@ -16,8 +18,6 @@
         <Button x:Name="LoginButton"    
                 Margin="0,50,0,0"
                 Text="Login"
-                BackgroundColor="Blue"
-                TextColor="White"
                 Clicked="LoginButton_OnClicked"></Button>
     </StackLayout>
 
