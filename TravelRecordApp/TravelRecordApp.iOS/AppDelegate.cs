@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using System.IO;
 using Foundation;
 using UIKit;
 
@@ -23,7 +23,12 @@ namespace TravelRecordApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+
+            string dbname = "travel_db.sqlite";
+            string folderPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal),".."); // una lista della cartelle del device e poi quella personale
+            string fullPath = Path.Combine(folderPath, dbname);
+
+            LoadApplication(new App(fullPath));
 
             return base.FinishedLaunching(app, options);
         }
