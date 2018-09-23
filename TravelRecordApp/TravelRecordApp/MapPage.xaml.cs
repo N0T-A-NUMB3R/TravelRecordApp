@@ -14,7 +14,7 @@ namespace TravelRecordApp
 	{
 		public MapPage ()
 		{
-			InitializeComponent ();
+			InitializeComponent();
 		}
 	}
 }
